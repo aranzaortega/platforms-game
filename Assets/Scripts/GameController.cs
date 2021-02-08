@@ -69,7 +69,7 @@ public class GameController : MonoBehaviour
     {
         currentLevel++;
         if (currentLevel > FindObjectOfType<GameStatus>().highestLevel)
-            currentLevel = 0;
+            currentLevel = 3;
         FindObjectOfType<GameStatus>().currentLevel = currentLevel;
 
         speedEnemy++;

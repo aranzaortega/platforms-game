@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayButton : MonoBehaviour
 {
     public int points = 0;
+    public int currentLevel = 1;
 
     public void LaunchGame() 
     { 
