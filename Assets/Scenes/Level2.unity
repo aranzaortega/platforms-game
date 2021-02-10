@@ -8378,6 +8378,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1498610239589973422, guid: 16c1f885bbbc2e649a7bb38b6ab7df7c,
         type: 3}
+      propertyPath: finalDiamond
+      value: 
+      objectReference: {fileID: 4758337523339942299, guid: a74bbedc1f7e43749b29e7ffe851a45f,
+        type: 3}
+    - target: {fileID: 1498610239589973422, guid: 16c1f885bbbc2e649a7bb38b6ab7df7c,
+        type: 3}
       propertyPath: gameInfoText
       value: 
       objectReference: {fileID: 592613130}

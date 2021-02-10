@@ -12,5 +12,6 @@ public class PlayButton : MonoBehaviour
     { 
         SceneManager.LoadScene("Level1");
         FindObjectOfType<GameStatus>().points = points;
+        FindObjectOfType<GameStatus>().currentLevel = currentLevel;
     }
 }

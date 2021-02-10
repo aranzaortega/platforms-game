@@ -16,6 +16,9 @@ public class GameController : MonoBehaviour
     [SerializeField] Transform key;
     [SerializeField] Vector3 keyPosition;
 
+    [SerializeField] Transform finalDiamond;
+    [SerializeField] Vector3 finalDiamondPosition;
+
     [SerializeField] Text gameOverText;
     [SerializeField] Text gameInfoText;
     [SerializeField] Text winnerText;
@@ -59,17 +62,24 @@ public class GameController : MonoBehaviour
     // Remaning items (diamonds)
     public void ItemsLeftCounter()
     {
-        itemsLeft--; 
-        if (itemsLeft <= 0)
-            key = Instantiate(key, keyPosition, Quaternion.identity);
+        itemsLeft--;
+        if (itemsLeft <= 0) 
+        { 
+            if (currentLevel >= FindObjectOfType<GameStatus>().highestLevel)
+            {
+                finalDiamond = Instantiate(finalDiamond, finalDiamondPosition, Quaternion.identity);
+            }
+            else
+            {
+                key = Instantiate(key, keyPosition, Quaternion.identity);
+            }
+        }
     }
 
     // Changing level
     public void NextLevel()
     {
         currentLevel++;
-        if (currentLevel > FindObjectOfType<GameStatus>().highestLevel)
-            currentLevel = 3;
         FindObjectOfType<GameStatus>().currentLevel = currentLevel;
 
         speedEnemy++;
